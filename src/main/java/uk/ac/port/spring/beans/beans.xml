@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="person" class="uk.ac.port.spring.Person">
+		<constructor-arg value="777" type="int" name="id"></constructor-arg>
+		<constructor-arg value="Mary" type="java.lang.String"
+			name="name">
+		</constructor-arg>
+		<property name="texId" value="321"></property>
+		<property name="address" ref="address"></property>
+	</bean>
+
+	<bean id="address" class="uk.ac.port.spring.Address">
+		<constructor-arg value="Baker Street" type="java.lang.String" name="street"></constructor-arg>
+		<constructor-arg value="SE7 PO1" type="java.lang.String" name="postcode"></constructor-arg>
+	</bean>
+</beans>
